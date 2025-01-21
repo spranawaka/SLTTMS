@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-primary to-secondary min-h-screen text-text-primary antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-card-bg/90 backdrop-blur-lg border border-border-light shadow-glow transition-all duration-500;
+}
+
+.tabel-color {
+  @apply bg-card-bg/80 backdrop-blur-lg border border-border-light shadow-glow transition-all duration-500;
+}
+
+.glass-card:hover {
+  @apply border-border-hover shadow-glow-hover transform scale-[1.02];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent/50;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-4 py-2 rounded-lg bg-accent text-primary font-medium transition-all duration-300 hover:bg-accent-hover shadow-lg shadow-accent/20 hover:shadow-accent/40 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 rounded-lg bg-accent-secondary/10 border border-accent-secondary/30 hover:border-accent-secondary/60 text-text-primary transition-all duration-300 hover:bg-accent-secondary/20 transform hover:scale-105;
+}
+
+/* Modal styles */
+.modal-backdrop {
+  @apply fixed inset-0 bg-primary/90 backdrop-blur-lg;
+}
+
+.modal-content {
+  @apply bg-card-bg/95 border border-border-light shadow-glow rounded-xl p-8 max-w-md w-full mx-4;
+}
+
+/* Form input styles */
+.form-input {
+  @apply w-full px-4 py-2 rounded-lg bg-secondary/50 border border-border-light focus:border-accent outline-none transition-colors text-text-primary;
+}
+
+
